@@ -192,6 +192,8 @@
 - (void)viewWillDisappear:(BOOL)animated {
 	[super viewWillDisappear:animated];
 	
+	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+	
 	[rWebView stopLoading];
 	rWebView.delegate = nil;
 	rWebView = nil;
